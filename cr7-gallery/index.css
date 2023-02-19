@@ -1,0 +1,54 @@
+body {
+    background-color: #010a01;
+    color: #fff;
+    padding: 50px;
+    padding-top: 200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.gallery {
+    position: relative;
+    display: flex;
+    height: 200px;
+    border-radius: 4px;
+    filter: brightness(0.8);
+}
+.gallery > .image {
+    min-width: 0;
+    flex: 1 1 10px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.gallery:hover > .image {
+    filter: brightness(0.4);
+}
+.gallery:hover > .tooltip {
+    display: block;
+}
+.gallery > .image:hover {
+    flex: 1 1 280px;
+    filter: drop-shadow(0 2px 16px red) contrast(110%);
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    font-size: 1.2em;
+    transform: translateX(-50%);
+    font-family: "Vibur", sans-serif;
+    text-shadow:
+      0 0 12px #0fa,
+      0 0 22px #0fa,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}

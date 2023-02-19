@@ -1,0 +1,23 @@
+// .playground {
+//   position: relative;
+// }
+// .playground > .snake {
+//   background-image: url(/bait.png);
+//   background-size: cover;
+//   filter: brightness(150%);
+//   width: 20px;
+//   height: 20px;
+//   transition: all 0.25s ease;
+//   &:first-child {
+//     background-image: url(/snake.png);
+//   }
+// }
+// .playground > .unit {
+//   position: absolute;
+//   background-image: url(/bait.png);
+//   background-size: cover;
+//   filter: brightness(250%);
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 100%;
+// }
