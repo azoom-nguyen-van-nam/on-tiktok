@@ -1,0 +1,70 @@
+.rubik {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+}
+
+.rubik.is-spinning {
+  animation: spinCube 8s infinite ease-in-out;
+}
+
+@keyframes spinCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.rubik__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.rubik__face--1 {
+  background: rgba(255, 0, 0, 0.7);
+}
+.rubik__face--2 {
+  background: rgba(255, 255, 0, 0.7);
+}
+.rubik__face--3 {
+  background: rgba(0, 255, 0, 0.7);
+}
+.rubik__face--4 {
+  background: rgba(0, 255, 255, 0.7);
+}
+.rubik__face--5 {
+  background: rgba(0, 0, 255, 0.7);
+}
+.rubik__face--6 {
+  background: rgba(38, 207, 196, 0.7);
+}
+
+.rubik__face--1 {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.rubik__face--2 {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.rubik__face--3 {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.rubik__face--4 {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.rubik__face--5 {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.rubik__face--6 {
+  transform: rotateX(-90deg) translateZ(100px);
+}
